@@ -8,7 +8,7 @@ function App() {
 
   return (
     <div className="App">
-      <main>
+      <main className='flex flex-col gap-6'>
         <Hero heroapi={heroapi} />
         <Sales endpoint={popularsales} />
         <Sales endpoint={topratedsales} />

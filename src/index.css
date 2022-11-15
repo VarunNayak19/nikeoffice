@@ -53,7 +53,7 @@
 
   /* Blur-Effect */
   .blur-effect-theme {
-    @apply bg-white/50 bg-clip-padding backdrop-filter backdrop-blur bg-opacity-50 opacity-100 z-[100] shadow-sm shadow-slate-100 transition-all duration-300;
+    @apply bg-white/20 bg-clip-padding backdrop-filter backdrop-blur bg-opacity-20 opacity-100 z-[100] shadow-sm shadow-slate-100 transition-all duration-300;
   }
 
   /* Icon Stles */
@@ -73,7 +73,7 @@
 
   /* button */
   .button-theme {
-    @apply px-7 py-1 rounded active:scale-90 transition-all duration-100 ease-in-out shadow-md sm:text-sm;
+    @apply px-7 py-1 rounded active:scale-90 transition-all duration-100 ease-in-out sm:text-sm;
   }
 
   /* tranistions-theme */

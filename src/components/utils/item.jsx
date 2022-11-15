@@ -5,26 +5,35 @@ const Item = ({ id, color, shadow, title, text, img, btn, rating, price }) => {
 
     return (
         <>
-            <div className={`relative bg-gradient-to-b ${color} ${shadow} grid items-center justify-items-center`}>
+            <div className={`relative bg-gradient-to-b ${color} ${shadow} grid items-center justify-items-center
+             rounded-xl py-4 px-5 transition-all duration-700 ease-in-out w-full hover:scale-105`}>
                 <div className='grid items-center justify-items-center'>
                     <h1 className='
                     text-slate-200 text-xl lg:text-lg md:text-base font-medium filter drop-shadow '>{title}</h1>
                     <p className='
                     text-slate-200 filter drop-shadow text-base md:text-sm font-normal'>{text}</p>
-                    <div className=''>
-                        <div className=''><h1 className=''>{price}</h1></div>
-                        <div className=''><StarIcon className='icon-style text-slate-900' /><h1>{rating}</h1></div>
+                    <div className='flex items-center justify-between
+                    w-28 my-2'>
+                        <div className='flex items-center
+                         bg-white/80 px-1 rounded'><h1 className=' text-black text-sm font-medium'>&#x20b9;{price * 80}</h1></div>
+                        <div className='flex items-center
+                         gap-1'><StarIcon className='icon-style w-5 h-5 md:w-4 md:h-4 ' /><h1 className=' text-slate-100 md:text-sm font-normal '>{rating}</h1></div>
                     </div>
-                    <div className=''>
-                        <button type='button' className=''><ShoppingBagIcon className='icon-style text-slate-900' /></button>
-                        <button type='button' className=''>{btn}</button>
+                    <div className='flex items-center
+                     gap-3'>
+                        <button type='button' className='
+                         bg-white/90 blur-effect-theme button-theme p-0.5 shadow-slate-200
+                         '><ShoppingBagIcon className='icon-style text-slate-900' /></button>
+                        <button type='button' className='
+                        bg-white/90 blur-effect-theme button-theme px-2 py-1 text-sm text-black shadow-slate-200
+                        '>{btn}</button>
                     </div>
                 </div>
-                <div className=''>
+                <div className='flex items-center'>
                     <img
                         src={img}
                         alt="shoesimg"
-                        className=" "
+                        className=" h-32 w-64 transition-theme hover:-rotate-12"
                     />
                 </div>
             </div>
