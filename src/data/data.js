@@ -32,10 +32,37 @@ import twitter from "../assets/twitter.svg";
 import youtube from "../assets/youtube.svg";
 import messenger from "../assets/messenger.svg";
 
+const gradientArr = [
+    "bg-gradient-to-br from-pink-500 via-red-500 to-yellow-500", "bg-gradient-to-br from-green-300 via-blue-500 to-purple-600",
+    "bg-gradient-to-br from-pink-300 via-purple-300 to-indigo-400", "bg-gradient-to-br from-gray-700 via-gray-900 to-black",
+    "bg-gradient-to-br from-gray-200 via-gray-400 to-gray-600", "bg-gradient-to-br from-blue-700 via-blue-800 to-gray-900",
+    "bg-gradient-to-br from-gray-400 via-gray-600 to-blue-800", "bg-gradient-to-br from-red-400 via-gray-300 to-blue-500",
+    "bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900", "bg-gradient-to-br from-gray-900 to-gray-600 bg-gradient-to-r",
+    "bg-gradient-to-br from-purple-800 via-violet-900 to-purple-800", "bg-gradient-to-br from-orange-900 via-amber-100 to-orange-900",
+    "bg-gradient-to-br from-gray-900 via-purple-900 to-violet-600", "bg-gradient-to-br from-purple-900 to-indigo-500"
+
+];
+
+function getRndInteger(min, max) {
+    return Math.floor(Math.random() * (max - min)) + min;
+}
+
+const gradient = gradientArr[getRndInteger(0, 13)]
+console.log(gradient)
+
+const heroimgarr = [heroimg, psale1, psale2, psale3, product1, product2, product3, product4, product5, product6, product7, product8, product9, product10, product11, product12];
+function getRndShoe(min, max) {
+    return Math.floor(Math.random() * (max - min)) + min;
+}
+
+const shoeImage = heroimgarr[getRndShoe(0, 15)]
+console.log(shoeImage)
+
+
 const heroapi = {
     title: "Play With Electric Nike",
     subtitle: "Adapt 2.0 Sneakers",
-    img: heroimg,
+    img: shoeImage,
     btntext: "Explore Product",
     videos: [
         { imgsrc: vcover1, clip: clip },
@@ -49,6 +76,7 @@ const heroapi = {
         { icon: twitter },
         { icon: youtube },
     ],
+    gradient
 };
 
 const popularsales = {
@@ -375,4 +403,5 @@ const footerAPI = {
 };
 
 
-export { heroapi, footerAPI, story, sneaker, highlight, topratedsales, popularsales };
+
+export { heroapi, footerAPI, story, sneaker, highlight, topratedsales, popularsales, gradient };

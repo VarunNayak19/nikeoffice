@@ -1,3 +1,6 @@
 export { default as Hero } from './hero.jsx'
 export { default as Sales } from './sales.jsx'
 export { default as FlexContent } from './flexcontent.jsx'
+export { default as Stories } from './stories.jsx'
+export { default as Footer } from './footer.jsx'
+export { default as NavBar } from './navbar.jsx'

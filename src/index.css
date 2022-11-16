@@ -81,3 +81,26 @@
     @apply transition-all duration-700 ease-in-out cursor-pointer;
   }
 }
+
+/* ::-webkit-scrollbar-track {
+  background-color: transparent;
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar {
+  width: 12px;
+  background-color: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  background-color: transparent;
+  background-image: -webkit-gradient(
+    linear,
+    left bottom,
+    left top,
+    color-stop(0.44, rgb(14, 48, 115)),
+    color-stop(0.72, rgb(12, 37, 67)),
+    color-stop(0.86, rgb(0, 0, 0))
+  );
+} */
