@@ -9,7 +9,7 @@ function App() {
   return (
     <div className="App">
       <NavBar />
-      {/* <Cart /> */}
+      <Cart />
       <main className='flex flex-col gap-6 relative'>
         <Hero heroapi={heroapi} />
         <Sales endpoint={popularsales} ifExists />
