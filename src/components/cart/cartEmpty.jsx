@@ -2,7 +2,7 @@ import { ArrowLeftIcon } from '@heroicons/react/24/solid'
 import React from 'react'
 import empty from '../../assets/emptybag.png'
 
-const CartEmpty = () => {
+const CartEmpty = ({ onCartToggle }) => {
     return (
         <>
             <div className='
@@ -17,7 +17,7 @@ const CartEmpty = () => {
                      transition-all duration-300 hover:scale-110 hover:-rotate-12
                     '
                 />
-                <button
+                <button onClick={onCartToggle}
                     className='button-theme bg-gradient-to-b from-amber-500
                     to-orange-500 shadow-lg shadow-orange-500 flex items-center
                     justify-center text-slate-900 py-2 gap-3 text-sm px-5 font-semibold

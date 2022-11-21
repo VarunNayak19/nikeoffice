@@ -3,7 +3,7 @@ import { ChevronDoubleLeftIcon, XMarkIcon } from '@heroicons/react/24/solid'
 import { useDispatch, useSelector } from 'react-redux';
 import { selectCartState, setCloseCart } from '../../app/cartSlice';
 
-const CartCount = () => {
+const CartCount = ({ clearCart, totalQuantity }) => {
     const dispatch = useDispatch();
     const ifCartState = useSelector(selectCartState)
     const onCartToggle = () => {
@@ -38,14 +38,14 @@ const CartCount = () => {
                         >Your Cart <span>  </span>
                             <span className='bg-theme-cart rounded px-1 py-0.5
                             text-slate-100 text-xs
-                            '>(items)</span>
+                            '>({totalQuantity} Items)</span>
                         </h1>
                     </div>
                 </div>
                 <div
                     className='item-center flex'
                 >
-                    <button type='button'
+                    <button onClick={clearCart} type='button'
                         className='button rounded bg-theme-cart active:scale-90 active:rotate-90 active:rounded-3xl transition-all p-0.5 '
                     >
                         <XMarkIcon className='w-5 h-5 text-white stroke-[2]' />
